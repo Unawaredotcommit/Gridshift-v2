@@ -1,0 +1,14 @@
+# GridShift (Python 3.10-3.12 recommended)
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+joblib>=1.3
+openpyxl>=3.1          # only for: scripts/01_prepare_data.py --from-raw
+lightgbm>=4.3
+shap>=0.45             # SHAP plots + interaction values (LightGBM TreeSHAP itself needs no shap pkg)
+matplotlib>=3.8
+streamlit>=1.35
+plotly>=5.20
+pytest>=8.0            # optional, for tests
+# Optional - only for the CNN-LSTM-Attention model (scripts/02_train_models.py --deep):
+# tensorflow>=2.16     # Keras 3; use 2.12-2.15 with tf.keras if you prefer the notebook's version

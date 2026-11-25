@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Raw datasets (download separately)
+Data/
+
+# Generated intermediate files
+artifacts/hourly_clean.csv
+artifacts/reports/*predictions*.csv
+
+# System files
+.DS_Store
+Thumbs.db

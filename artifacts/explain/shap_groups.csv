@@ -1,0 +1,9 @@
+group,mean_abs_shap_mw,n_features
+Demand history,6107.557965645552,9
+Temperature-derived (incl. feels-like),3004.3587684560293,7
+All weather,2946.451868369435,11
+Calendar,1141.733724442442,9
+Humidity,228.25096626220986,1
+Wind,95.70433230902522,1
+Precipitation,43.83306231681144,2
+Horizon,22.957834491391885,1

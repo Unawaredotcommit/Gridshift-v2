@@ -1,0 +1,104 @@
+{
+  "source": "C:\\Users\\2006a\\Downloads\\hybrid-multiscale-attn-cnn-lstm-load-forecasting-main\\hybrid-multiscale-attn-cnn-lstm-load-forecasting-main\\Data\\Final_dataset_ERCOT_v2.csv",
+  "rows": 61368,
+  "start": "2018-01-01 01:00:00",
+  "end": "2025-01-01 00:00:00",
+  "units": {
+    "tmpc": "degC",
+    "relh": "percent",
+    "sped": "mph",
+    "p01m": "mm per hour",
+    "feel": "degF",
+    "ERCOT": "MW"
+  },
+  "wind_unit_evidence": "IEM documentation + empirical check (see comment); not stated inside the repo",
+  "cleaning": {
+    "input_rows": 61368,
+    "unparseable_timestamps_dropped": 0,
+    "duplicate_timestamps_averaged": 0,
+    "hours_absent_from_file_added_as_NaN": 0,
+    "weather_max_gap_hours": 2,
+    "missing_before_cleaning": {
+      "ERCOT": 0,
+      "tmpc": 0,
+      "relh": 0,
+      "sped": 0,
+      "p01m": 0
+    },
+    "interpolated_weather_values": {
+      "tmpc": 0,
+      "relh": 0,
+      "sped": 0
+    },
+    "missing_after_cleaning": {
+      "ERCOT": 8,
+      "tmpc": 0,
+      "relh": 0,
+      "sped": 0,
+      "p01m": 0
+    },
+    "precipitation_missing_retained": 0,
+    "precipitation_zeros_kept": 57169
+  },
+  "ERCOT_hours_imputed_upstream_and_masked_to_NaN": [
+    "2018-03-11 03:00:00",
+    "2019-03-10 03:00:00",
+    "2020-03-08 03:00:00",
+    "2021-03-14 03:00:00",
+    "2022-03-13 03:00:00",
+    "2022-12-01 01:00:00",
+    "2023-03-12 03:00:00",
+    "2024-03-10 03:00:00"
+  ],
+  "note_upstream": "The processed CSV was linearly interpolated upstream for ALL columns (Data Preprocessing notebook). ERCOT hours that were imputed are detected from the raw load files and masked; imputed weather values (incl. precipitation) cannot be identified or undone here - use --from-raw to preserve true gaps (its weather aggregation differs from the processed file).",
+  "raw_vs_processed_correlation": null,
+  "forecast_origins": {
+    "candidate_origins": 61128,
+    "valid_origins": 60552,
+    "discarded_origins": 576,
+    "discarded_where_variable_missing": {
+      "ERCOT": 576,
+      "tmpc": 0,
+      "relh": 0,
+      "sped": 0,
+      "p01m": 0
+    },
+    "discarded_only_because_of": {
+      "ERCOT": 576,
+      "tmpc": 0,
+      "relh": 0,
+      "sped": 0,
+      "p01m": 0
+    },
+    "origins_dropped_by_completeness_filter_after_split": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    }
+  },
+  "split_origins": {
+    "train": 14383,
+    "val": 2888,
+    "test": 2897
+  },
+  "split_tabular_rows(origins x 24h)": {
+    "train": 345192,
+    "val": 69312,
+    "test": 69528
+  },
+  "split_ranges": {
+    "train": [
+      "2018-01-10 03:00:00",
+      "2022-12-30 21:00:00"
+    ],
+    "val": [
+      "2023-01-01 00:00:00",
+      "2023-12-30 21:00:00"
+    ],
+    "test": [
+      "2024-01-01 00:00:00",
+      "2024-12-31 00:00:00"
+    ]
+  },
+  "origin_stride_hours": 3
+}
